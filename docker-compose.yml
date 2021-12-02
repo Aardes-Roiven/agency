@@ -1,9 +1,70 @@
-version: '2'
+version: '3'
 services:
-  php:
-    image: yiisoftware/yii2-php:7.4-apache
+
+  #PHP Service
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    image: php:7.3-fpm
+    container_name: agency-php
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
     volumes:
-      - ~/.composer-docker/cache:/root/.composer/cache:delegated
-      - ./:/app:delegated
+      - ./:/var/www
+      - ./docker/php/php.ini:/usr/local/etc/php/conf.d/local.ini
+
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: agency-nginx
+    restart: unless-stopped
+    tty: true
     ports:
-      - '8000:80'
+      - "9877:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+
+  #MySQL Service
+  #  db:
+  #    image: mysql:5.7
+  #    container_name: agency-mysql
+  #    command: "--default-authentication-plugin=mysql_native_password"
+  #    restart: unless-stopped
+  #    tty: true
+  #    ports:
+  #      - "7776:3306"
+  #    environment:
+  #      MYSQL_ROOT_PASSWORD: 228508
+  #      MYSQL_DATABASE: db
+  #  phpmyadmin:
+  #    image: phpmyadmin/phpmyadmin
+  #    container_name: agency-phpmyadmin
+  #    depends_on:
+  #      - db
+  #    ports:
+  #      - 7760:80
+  pg_db:
+    image: postgres
+    container_name: agency-postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=db
+    ports:
+      - ${POSTGRES_PORT:-5433}:5432
+
+#Команда для выгрузки бд - mysql
+#docker exec webinar3_mysql /usr/bin/mysqldump -u root --password=webimar_laravel db > backup.sql
+
+# Импорт postgres
+# cat dump.sql | docker exec -i webinar3_postgres psql -U postgres
+
+# Экспорт postgres
+# docker exec -t webinar3_postgres pg_dumpall -c -U postgres > dump.sql
