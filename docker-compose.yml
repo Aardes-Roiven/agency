@@ -64,7 +64,7 @@ services:
 #docker exec webinar3_mysql /usr/bin/mysqldump -u root --password=webimar_laravel db > backup.sql
 
 # Импорт postgres
-# cat dump.sql | docker exec -i webinar3_postgres psql -U postgres
+# cat dump.sql | docker exec -i agency-postgres psql -U postgres
 
 # Экспорт postgres
-# docker exec -t webinar3_postgres pg_dumpall -c -U postgres > dump.sql
+# docker exec -t agency-postgres pg_dumpall -c -U postgres > dump.sql
