@@ -58,7 +58,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=db
     ports:
-      - ${POSTGRES_PORT:-5433}:5432
+      - ${POSTGRES_PORT:-5432}:5432
 
 #Команда для выгрузки бд - mysql
 #docker exec webinar3_mysql /usr/bin/mysqldump -u root --password=webimar_laravel db > backup.sql
