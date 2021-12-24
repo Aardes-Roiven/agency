@@ -65,6 +65,11 @@ $array = [
         "Жилая недвижимость",
         "Коммерческая недвижимость"
     ],
+    'client_status' => [
+        "Приоритетный",
+        "Повышенный",
+        "Обычный"
+    ],
 ];
 
 function rusConverter($string): string {
@@ -123,6 +128,28 @@ function createEmployee(): void{
                    ", " . "'" . $getEmail . "', " .
                    "'" . $getLogin . "', " .
                    "'" . $getPassword . "'), ";
+        $bigStr .= $element . '<br>';
+    }
+    $bigStr = $querryString . substr($bigStr, 0, -6);
+    echo $bigStr;
+}
+
+function createClient(): void{
+    global $array;
+    $bigStr = '';
+    $querryString = 'insert into client (id, name, status, number, email)' . '<br>' . 'values ';
+    for ($i=1; $i<201; $i++) {
+        $randomId = $i;
+        $randomName = $array['nameArray'][array_rand($array['nameArray'])];
+        $randomFathersName = $array['fathersNameArray'][array_rand($array['fathersNameArray'])];
+        $randomLastnameArray = $array['lastnameArray'][array_rand($array['lastnameArray'])];
+        $getFullName = $randomLastnameArray . " " . $randomName . " " . $randomFathersName;
+        $status = array_rand($array['client_status']);
+        $getNumber = '7' . rand(9290000000, 9299999999);
+        $getEmail = preg_replace('/\s+/', '', rusConverter($getFullName)) . '-' . $randomId . '@agency.ru';
+        $element = "(" . $randomId . ", " . "'" . $getFullName .
+            "'" . ", '" . $array['client_status'][$status] . "', " . $getNumber .
+            ", " . "'" . $getEmail . "'), ";
         $bigStr .= $element . '<br>';
     }
     $bigStr = $querryString . substr($bigStr, 0, -6);
