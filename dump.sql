@@ -547,6 +547,206 @@ ALTER TABLE ONLY public.real_estate_object ALTER COLUMN id SET DEFAULT nextval('
 --
 
 COPY public.client (id, name, status, number, email) FROM stdin;
+1	Иванов Виктор Викторович	Обычный	79294977357 	IvanovViktorViktorovich-1@agency.ru
+2	Романов Артём Петрович	Обычный	79296847806 	RomanovArtemPetrovich-2@agency.ru
+3	Солдатов Пётр Дмитриевич	Повышенный	79292152819 	SoldatovPetrDmitrievich-3@agency.ru
+4	Иванов Евгений Ильич	Повышенный	79299791994 	IvanovEvgeniyIlich-4@agency.ru
+5	Круглов Олег Леонидович	Приоритетный	79298869675 	KruglovOlegLeonidovich-5@agency.ru
+6	Иванов Илья Арсеньевич	Приоритетный	79298303402 	IvanovIlyaArsenevich-6@agency.ru
+7	Антипов Леонид Олегович	Повышенный	79299860471 	AntipovLeonidOlegovich-7@agency.ru
+8	Круглов Иван Александрович	Обычный	79299371723 	KruglovIvanAleksandrovich-8@agency.ru
+9	Васильев Юрий Ильич	Приоритетный	79298151185 	VasilevYuriyIlich-9@agency.ru
+10	Петров Александр Юрьевич	Повышенный	79297241841 	PetrovAleksandrYurevich-10@agency.ru
+11	Романов Василий Олегович	Приоритетный	79290453230 	RomanovVasiliyOlegovich-11@agency.ru
+12	Васильев Леонид Петрович	Обычный	79294717257 	VasilevLeonidPetrovich-12@agency.ru
+13	Солдатов Юрий Эдуардович	Обычный	79292513054 	SoldatovYuriyEduardovich-13@agency.ru
+14	Егоров Олег Артёмович	Повышенный	79297842494 	EgorovOlegArtemovich-14@agency.ru
+15	Петров Василий Викторович	Приоритетный	79293194805 	PetrovVasiliyViktorovich-15@agency.ru
+16	Круглов Илья Олегович	Повышенный	79294103662 	KruglovIlyaOlegovich-16@agency.ru
+17	Солдатов Арсений Петрович	Приоритетный	79298288749 	SoldatovArseniyPetrovich-17@agency.ru
+18	Романов Артём Юрьевич	Приоритетный	79294694808 	RomanovArtemYurevich-18@agency.ru
+19	Петров Антон Васильевич	Обычный	79295896077 	PetrovAntonVasilevich-19@agency.ru
+20	Баранов Арсений Арсеньевич	Обычный	79299562752 	BaranovArseniyArsenevich-20@agency.ru
+21	Баранов Виктор Артёмович	Повышенный	79295965076 	BaranovViktorArtemovich-21@agency.ru
+22	Антипов Евгений Евгеньевич	Повышенный	79293081067 	AntipovEvgeniyEvgenevich-22@agency.ru
+23	Круглов Вадим Арсеньевич	Обычный	79298360043 	KruglovVadimArsenevich-23@agency.ru
+24	Иванов Виктор Олегович	Повышенный	79294648169 	IvanovViktorOlegovich-24@agency.ru
+25	Высоцкий Иван Петрович	Повышенный	79292288816 	VysockiyIvanPetrovich-25@agency.ru
+26	Новиков Виктор Викторович	Обычный	79295237623 	NovikovViktorViktorovich-26@agency.ru
+27	Иванов Вадим Геннадьевич	Обычный	79292562243 	IvanovVadimGennadevich-27@agency.ru
+28	Солдатов Виктор Дмитриевич	Приоритетный	79294032586 	SoldatovViktorDmitrievich-28@agency.ru
+29	Кузнецов Леонид Васильевич	Приоритетный	79294449926 	KuznecovLeonidVasilevich-29@agency.ru
+30	Баранов Евгений Вадимович	Обычный	79295499973 	BaranovEvgeniyVadimovich-30@agency.ru
+31	Васильев Антон Арсеньевич	Приоритетный	79292132009 	VasilevAntonArsenevich-31@agency.ru
+32	Солдатов Антон Дмитриевич	Приоритетный	79292696468 	SoldatovAntonDmitrievich-32@agency.ru
+33	Новиков Пётр Дмитриевич	Приоритетный	79298588547 	NovikovPetrDmitrievich-33@agency.ru
+34	Игнатьев Владимир Викторович	Повышенный	79296967157 	IgnatevVladimirViktorovich-34@agency.ru
+35	Егоров Александр Владимирович	Повышенный	79291067487 	EgorovAleksandrVladimirovich-35@agency.ru
+36	Кузнецов Дмитрий Геннадьевич	Обычный	79299135339 	KuznecovDmitriyGennadevich-36@agency.ru
+37	Романов Виктор Эдуардович	Приоритетный	79292852211 	RomanovViktorEduardovich-37@agency.ru
+38	Романов Илья Евгеньевич	Обычный	79292015573 	RomanovIlyaEvgenevich-38@agency.ru
+39	Игнатьев Александр Леонидович	Повышенный	79291778011 	IgnatevAleksandrLeonidovich-39@agency.ru
+40	Круглов Леонид Петрович	Приоритетный	79290636220 	KruglovLeonidPetrovich-40@agency.ru
+41	Антипов Иван Васильевич	Приоритетный	79294253627 	AntipovIvanVasilevich-41@agency.ru
+42	Петров Олег Викторович	Повышенный	79290039695 	PetrovOlegViktorovich-42@agency.ru
+43	Игнатьев Василий Леонидович	Повышенный	79299577235 	IgnatevVasiliyLeonidovich-43@agency.ru
+44	Новиков Александр Иванович	Повышенный	79295210101 	NovikovAleksandrIvanovich-44@agency.ru
+45	Таманский Александр Васильевич	Приоритетный	79291558147 	TamanskiyAleksandrVasilevich-45@agency.ru
+46	Ерёмин Илья Ильич	Повышенный	79295193732 	EreminIlyaIlich-46@agency.ru
+47	Егоров Иван Геннадьевич	Повышенный	79296826578 	EgorovIvanGennadevich-47@agency.ru
+48	Егоров Виктор Ильич	Обычный	79298173805 	EgorovViktorIlich-48@agency.ru
+49	Таманский Юрий Олегович	Обычный	79295560593 	TamanskiyYuriyOlegovich-49@agency.ru
+50	Шульц Антон Иванович	Приоритетный	79291509048 	ShulcAntonIvanovich-50@agency.ru
+51	Таманский Антон Леонидович	Обычный	79294389734 	TamanskiyAntonLeonidovich-51@agency.ru
+52	Васильев Дмитрий Арсеньевич	Повышенный	79296467812 	VasilevDmitriyArsenevich-52@agency.ru
+53	Игнатьев Дмитрий Эдуардович	Приоритетный	79292983652 	IgnatevDmitriyEduardovich-53@agency.ru
+54	Игнатьев Антон Викторович	Повышенный	79294078674 	IgnatevAntonViktorovich-54@agency.ru
+55	Антипов Евгений Васильевич	Приоритетный	79290175573 	AntipovEvgeniyVasilevich-55@agency.ru
+56	Ерёмин Владимир Иванович	Приоритетный	79290857434 	EreminVladimirIvanovich-56@agency.ru
+57	Иванов Виктор Викторович	Приоритетный	79294551466 	IvanovViktorViktorovich-57@agency.ru
+58	Баранов Виктор Ильич	Повышенный	79298750073 	BaranovViktorIlich-58@agency.ru
+59	Петров Антон Владимирович	Обычный	79296688919 	PetrovAntonVladimirovich-59@agency.ru
+60	Егоров Антон Викторович	Приоритетный	79298080821 	EgorovAntonViktorovich-60@agency.ru
+61	Петров Василий Олегович	Приоритетный	79292402477 	PetrovVasiliyOlegovich-61@agency.ru
+62	Романов Геннадий Артёмович	Повышенный	79294636022 	RomanovGennadiyArtemovich-62@agency.ru
+63	Шульц Владимир Юрьевич	Обычный	79296219345 	ShulcVladimirYurevich-63@agency.ru
+64	Круглов Дмитрий Владимирович	Приоритетный	79297568773 	KruglovDmitriyVladimirovich-64@agency.ru
+65	Иванов Вадим Олегович	Повышенный	79297478414 	IvanovVadimOlegovich-65@agency.ru
+66	Круглов Иван Вадимович	Обычный	79293468580 	KruglovIvanVadimovich-66@agency.ru
+67	Петров Иван Эдуардович	Обычный	79292337294 	PetrovIvanEduardovich-67@agency.ru
+68	Круглов Виктор Артёмович	Приоритетный	79293495304 	KruglovViktorArtemovich-68@agency.ru
+69	Кузнецов Арсений Ильич	Обычный	79295230489 	KuznecovArseniyIlich-69@agency.ru
+70	Васильев Илья Антонович	Приоритетный	79292357761 	VasilevIlyaAntonovich-70@agency.ru
+71	Антипов Леонид Александрович	Приоритетный	79296739826 	AntipovLeonidAleksandrovich-71@agency.ru
+72	Ерёмин Геннадий Петрович	Повышенный	79291474395 	EreminGennadiyPetrovich-72@agency.ru
+73	Новиков Арсений Викторович	Обычный	79291015857 	NovikovArseniyViktorovich-73@agency.ru
+74	Егоров Геннадий Иванович	Повышенный	79297467192 	EgorovGennadiyIvanovich-74@agency.ru
+75	Антипов Дмитрий Петрович	Повышенный	79296044922 	AntipovDmitriyPetrovich-75@agency.ru
+76	Шульц Артём Юрьевич	Обычный	79296337140 	ShulcArtemYurevich-76@agency.ru
+77	Кузнецов Артём Александрович	Повышенный	79297264031 	KuznecovArtemAleksandrovich-77@agency.ru
+78	Егоров Артём Эдуардович	Приоритетный	79296923501 	EgorovArtemEduardovich-78@agency.ru
+79	Игнатьев Юрий Петрович	Приоритетный	79295112095 	IgnatevYuriyPetrovich-79@agency.ru
+80	Егоров Иван Арсеньевич	Повышенный	79296149646 	EgorovIvanArsenevich-80@agency.ru
+81	Акимов Геннадий Артёмович	Обычный	79294447759 	AkimovGennadiyArtemovich-81@agency.ru
+82	Шульц Леонид Александрович	Приоритетный	79297891916 	ShulcLeonidAleksandrovich-82@agency.ru
+83	Акимов Леонид Геннадьевич	Повышенный	79292448946 	AkimovLeonidGennadevich-83@agency.ru
+84	Кузнецов Геннадий Леонидович	Обычный	79291881943 	KuznecovGennadiyLeonidovich-84@agency.ru
+85	Антипов Евгений Артёмович	Приоритетный	79290138699 	AntipovEvgeniyArtemovich-85@agency.ru
+86	Солдатов Антон Геннадьевич	Приоритетный	79295986397 	SoldatovAntonGennadevich-86@agency.ru
+87	Акимов Евгений Эдуардович	Приоритетный	79294054055 	AkimovEvgeniyEduardovich-87@agency.ru
+88	Ерёмин Василий Викторович	Повышенный	79290109516 	EreminVasiliyViktorovich-88@agency.ru
+89	Романов Евгений Дмитриевич	Обычный	79298763612 	RomanovEvgeniyDmitrievich-89@agency.ru
+90	Круглов Владимир Ильич	Повышенный	79298010095 	KruglovVladimirIlich-90@agency.ru
+91	Антипов Антон Александрович	Приоритетный	79299801839 	AntipovAntonAleksandrovich-91@agency.ru
+92	Солдатов Виктор Леонидович	Повышенный	79294180875 	SoldatovViktorLeonidovich-92@agency.ru
+93	Егоров Арсений Эдуардович	Повышенный	79295832848 	EgorovArseniyEduardovich-93@agency.ru
+94	Солдатов Эдуард Артёмович	Повышенный	79296082443 	SoldatovEduardArtemovich-94@agency.ru
+95	Егоров Эдуард Геннадьевич	Повышенный	79293896663 	EgorovEduardGennadevich-95@agency.ru
+96	Шульц Александр Иванович	Приоритетный	79293903023 	ShulcAleksandrIvanovich-96@agency.ru
+97	Петров Юрий Викторович	Повышенный	79291941618 	PetrovYuriyViktorovich-97@agency.ru
+98	Егоров Геннадий Петрович	Обычный	79293945838 	EgorovGennadiyPetrovich-98@agency.ru
+99	Таманский Геннадий Леонидович	Обычный	79297549591 	TamanskiyGennadiyLeonidovich-99@agency.ru
+100	Круглов Виктор Артёмович	Приоритетный	79291849403 	KruglovViktorArtemovich-100@agency.ru
+101	Игнатьев Дмитрий Викторович	Повышенный	79296945906 	IgnatevDmitriyViktorovich-101@agency.ru
+102	Кузнецов Владимир Арсеньевич	Приоритетный	79292976865 	KuznecovVladimirArsenevich-102@agency.ru
+103	Акимов Эдуард Александрович	Обычный	79297585717 	AkimovEduardAleksandrovich-103@agency.ru
+104	Васнецов Олег Геннадьевич	Обычный	79290715522 	VasnecovOlegGennadevich-104@agency.ru
+105	Высоцкий Артём Ильич	Обычный	79299577015 	VysockiyArtemIlich-105@agency.ru
+106	Антипов Олег Викторович	Обычный	79295501547 	AntipovOlegViktorovich-106@agency.ru
+107	Солдатов Александр Ильич	Обычный	79298270493 	SoldatovAleksandrIlich-107@agency.ru
+108	Высоцкий Илья Дмитриевич	Приоритетный	79293386773 	VysockiyIlyaDmitrievich-108@agency.ru
+109	Баранов Леонид Юрьевич	Повышенный	79296332444 	BaranovLeonidYurevich-109@agency.ru
+110	Круглов Артём Леонидович	Обычный	79296025190 	KruglovArtemLeonidovich-110@agency.ru
+111	Романов Виктор Леонидович	Повышенный	79299205387 	RomanovViktorLeonidovich-111@agency.ru
+112	Круглов Илья Эдуардович	Повышенный	79295690977 	KruglovIlyaEduardovich-112@agency.ru
+113	Высоцкий Леонид Ильич	Повышенный	79294973316 	VysockiyLeonidIlich-113@agency.ru
+114	Игнатьев Дмитрий Дмитриевич	Приоритетный	79295457057 	IgnatevDmitriyDmitrievich-114@agency.ru
+115	Иванов Эдуард Антонович	Повышенный	79298305603 	IvanovEduardAntonovich-115@agency.ru
+116	Игнатьев Александр Викторович	Приоритетный	79290249542 	IgnatevAleksandrViktorovich-116@agency.ru
+117	Антипов Леонид Васильевич	Обычный	79294450337 	AntipovLeonidVasilevich-117@agency.ru
+118	Новиков Олег Геннадьевич	Повышенный	79296768768 	NovikovOlegGennadevich-118@agency.ru
+119	Солдатов Дмитрий Эдуардович	Обычный	79293282502 	SoldatovDmitriyEduardovich-119@agency.ru
+120	Таманский Юрий Ильич	Приоритетный	79292239043 	TamanskiyYuriyIlich-120@agency.ru
+121	Романов Вадим Антонович	Повышенный	79292401493 	RomanovVadimAntonovich-121@agency.ru
+122	Романов Эдуард Евгеньевич	Повышенный	79292339278 	RomanovEduardEvgenevich-122@agency.ru
+123	Игнатьев Виктор Олегович	Повышенный	79296577238 	IgnatevViktorOlegovich-123@agency.ru
+124	Ерёмин Пётр Иванович	Обычный	79292010657 	EreminPetrIvanovich-124@agency.ru
+125	Акимов Леонид Дмитриевич	Приоритетный	79297531201 	AkimovLeonidDmitrievich-125@agency.ru
+126	Романов Арсений Иванович	Повышенный	79294187958 	RomanovArseniyIvanovich-126@agency.ru
+127	Васнецов Вадим Владимирович	Повышенный	79291891787 	VasnecovVadimVladimirovich-127@agency.ru
+128	Петров Илья Олегович	Обычный	79291077443 	PetrovIlyaOlegovich-128@agency.ru
+129	Кузнецов Дмитрий Олегович	Обычный	79295470631 	KuznecovDmitriyOlegovich-129@agency.ru
+130	Кузнецов Дмитрий Васильевич	Обычный	79292680420 	KuznecovDmitriyVasilevich-130@agency.ru
+131	Высоцкий Вадим Геннадьевич	Повышенный	79298170195 	VysockiyVadimGennadevich-131@agency.ru
+132	Новиков Илья Арсеньевич	Обычный	79299525194 	NovikovIlyaArsenevich-132@agency.ru
+133	Круглов Иван Леонидович	Обычный	79296525836 	KruglovIvanLeonidovich-133@agency.ru
+134	Высоцкий Евгений Геннадьевич	Повышенный	79296355199 	VysockiyEvgeniyGennadevich-134@agency.ru
+135	Васнецов Иван Арсеньевич	Повышенный	79297344750 	VasnecovIvanArsenevich-135@agency.ru
+136	Игнатьев Эдуард Иванович	Приоритетный	79297705330 	IgnatevEduardIvanovich-136@agency.ru
+137	Антипов Дмитрий Викторович	Повышенный	79293769532 	AntipovDmitriyViktorovich-137@agency.ru
+138	Таманский Виктор Олегович	Приоритетный	79290862433 	TamanskiyViktorOlegovich-138@agency.ru
+139	Круглов Иван Владимирович	Приоритетный	79294869896 	KruglovIvanVladimirovich-139@agency.ru
+140	Егоров Александр Леонидович	Повышенный	79295497690 	EgorovAleksandrLeonidovich-140@agency.ru
+141	Ерёмин Эдуард Геннадьевич	Повышенный	79295121413 	EreminEduardGennadevich-141@agency.ru
+142	Романов Артём Леонидович	Повышенный	79291889058 	RomanovArtemLeonidovich-142@agency.ru
+143	Высоцкий Василий Геннадьевич	Приоритетный	79298920247 	VysockiyVasiliyGennadevich-143@agency.ru
+144	Таманский Вадим Арсеньевич	Приоритетный	79290867593 	TamanskiyVadimArsenevich-144@agency.ru
+145	Васильев Илья Владимирович	Повышенный	79292592636 	VasilevIlyaVladimirovich-145@agency.ru
+146	Шульц Александр Евгеньевич	Обычный	79294262612 	ShulcAleksandrEvgenevich-146@agency.ru
+147	Егоров Арсений Вадимович	Обычный	79294815833 	EgorovArseniyVadimovich-147@agency.ru
+148	Кузнецов Василий Александрович	Приоритетный	79292573353 	KuznecovVasiliyAleksandrovich-148@agency.ru
+149	Высоцкий Антон Владимирович	Повышенный	79295873738 	VysockiyAntonVladimirovich-149@agency.ru
+150	Егоров Артём Вадимович	Повышенный	79292939820 	EgorovArtemVadimovich-150@agency.ru
+151	Акимов Виктор Арсеньевич	Обычный	79292744890 	AkimovViktorArsenevich-151@agency.ru
+152	Кузнецов Юрий Леонидович	Приоритетный	79291371762 	KuznecovYuriyLeonidovich-152@agency.ru
+153	Кузнецов Дмитрий Евгеньевич	Обычный	79299803609 	KuznecovDmitriyEvgenevich-153@agency.ru
+154	Антипов Илья Геннадьевич	Повышенный	79299180798 	AntipovIlyaGennadevich-154@agency.ru
+155	Игнатьев Артём Геннадьевич	Обычный	79294883845 	IgnatevArtemGennadevich-155@agency.ru
+156	Иванов Юрий Олегович	Повышенный	79299548433 	IvanovYuriyOlegovich-156@agency.ru
+157	Солдатов Артём Викторович	Обычный	79290388806 	SoldatovArtemViktorovich-157@agency.ru
+158	Таманский Леонид Юрьевич	Обычный	79292462971 	TamanskiyLeonidYurevich-158@agency.ru
+159	Антипов Антон Дмитриевич	Приоритетный	79292954866 	AntipovAntonDmitrievich-159@agency.ru
+160	Романов Пётр Вадимович	Приоритетный	79292367515 	RomanovPetrVadimovich-160@agency.ru
+161	Акимов Юрий Эдуардович	Приоритетный	79290029121 	AkimovYuriyEduardovich-161@agency.ru
+162	Васнецов Юрий Леонидович	Обычный	79293258807 	VasnecovYuriyLeonidovich-162@agency.ru
+163	Егоров Олег Владимирович	Повышенный	79295443636 	EgorovOlegVladimirovich-163@agency.ru
+164	Шульц Пётр Васильевич	Обычный	79292626360 	ShulcPetrVasilevich-164@agency.ru
+165	Круглов Леонид Антонович	Приоритетный	79295854765 	KruglovLeonidAntonovich-165@agency.ru
+166	Петров Вадим Васильевич	Повышенный	79291136211 	PetrovVadimVasilevich-166@agency.ru
+167	Егоров Пётр Ильич	Приоритетный	79296976612 	EgorovPetrIlich-167@agency.ru
+168	Высоцкий Александр Александрович	Повышенный	79292262715 	VysockiyAleksandrAleksandrovich-168@agency.ru
+169	Романов Арсений Геннадьевич	Приоритетный	79299263707 	RomanovArseniyGennadevich-169@agency.ru
+170	Баранов Владимир Иванович	Приоритетный	79292145583 	BaranovVladimirIvanovich-170@agency.ru
+171	Шульц Антон Арсеньевич	Повышенный	79294241289 	ShulcAntonArsenevich-171@agency.ru
+172	Игнатьев Олег Олегович	Обычный	79293255791 	IgnatevOlegOlegovich-172@agency.ru
+173	Баранов Виктор Ильич	Приоритетный	79299386100 	BaranovViktorIlich-173@agency.ru
+174	Егоров Леонид Артёмович	Обычный	79295783120 	EgorovLeonidArtemovich-174@agency.ru
+175	Игнатьев Антон Арсеньевич	Приоритетный	79294652533 	IgnatevAntonArsenevich-175@agency.ru
+176	Круглов Дмитрий Иванович	Повышенный	79292769220 	KruglovDmitriyIvanovich-176@agency.ru
+177	Егоров Эдуард Васильевич	Приоритетный	79298593713 	EgorovEduardVasilevich-177@agency.ru
+178	Акимов Арсений Арсеньевич	Повышенный	79299902173 	AkimovArseniyArsenevich-178@agency.ru
+179	Новиков Антон Иванович	Повышенный	79296621543 	NovikovAntonIvanovich-179@agency.ru
+180	Кузнецов Вадим Евгеньевич	Повышенный	79292688085 	KuznecovVadimEvgenevich-180@agency.ru
+181	Высоцкий Дмитрий Владимирович	Повышенный	79297710146 	VysockiyDmitriyVladimirovich-181@agency.ru
+182	Васильев Дмитрий Евгеньевич	Приоритетный	79293418118 	VasilevDmitriyEvgenevich-182@agency.ru
+183	Васильев Иван Петрович	Повышенный	79299572525 	VasilevIvanPetrovich-183@agency.ru
+184	Новиков Виктор Иванович	Обычный	79294591720 	NovikovViktorIvanovich-184@agency.ru
+185	Иванов Александр Артёмович	Обычный	79297807425 	IvanovAleksandrArtemovich-185@agency.ru
+186	Новиков Артём Дмитриевич	Повышенный	79298668301 	NovikovArtemDmitrievich-186@agency.ru
+187	Кузнецов Эдуард Артёмович	Приоритетный	79295208202 	KuznecovEduardArtemovich-187@agency.ru
+188	Кузнецов Дмитрий Леонидович	Обычный	79299282861 	KuznecovDmitriyLeonidovich-188@agency.ru
+189	Высоцкий Вадим Ильич	Повышенный	79299499058 	VysockiyVadimIlich-189@agency.ru
+190	Таманский Леонид Евгеньевич	Повышенный	79293349374 	TamanskiyLeonidEvgenevich-190@agency.ru
+191	Игнатьев Пётр Олегович	Приоритетный	79291760106 	IgnatevPetrOlegovich-191@agency.ru
+192	Иванов Илья Викторович	Обычный	79297473177 	IvanovIlyaViktorovich-192@agency.ru
+193	Круглов Арсений Антонович	Повышенный	79299885343 	KruglovArseniyAntonovich-193@agency.ru
+194	Высоцкий Дмитрий Вадимович	Приоритетный	79297940724 	VysockiyDmitriyVadimovich-194@agency.ru
+195	Ерёмин Юрий Иванович	Повышенный	79297948336 	EreminYuriyIvanovich-195@agency.ru
+196	Акимов Арсений Викторович	Повышенный	79294529072 	AkimovArseniyViktorovich-196@agency.ru
+197	Шульц Виктор Эдуардович	Повышенный	79295966044 	ShulcViktorEduardovich-197@agency.ru
+198	Круглов Арсений Александрович	Обычный	79291819771 	KruglovArseniyAleksandrovich-198@agency.ru
+199	Высоцкий Александр Дмитриевич	Повышенный	79292568230 	VysockiyAleksandrDmitrievich-199@agency.ru
+200	Баранов Пётр Евгеньевич	Приоритетный	79290061657 	BaranovPetrEvgenevich-200@agency.ru
 \.
 
 
@@ -762,6 +962,26 @@ COPY public.real_estate_building (id, address, complex_id, floor_count, dev_id) 
 --
 
 COPY public.real_estate_complex (id, name, type, comfort_class) FROM stdin;
+1	ONYX DELUXE	Жилой	Элитный
+2	STELLAR CITY	Смешанный	Бизнес
+3	SYMPHONY 34	Жилой	Премиум
+4	Крылья	Жилой	Комфорт
+5	Вереск	Жилой	Комфорт
+6	HEADLINER	Коммерческий	Премиум
+7	Новоковалёвское	Жилой	Стандарт
+8	Павелецкая Сити	Жилой	Бизнес
+9	VOXHALL	Смешанный	Премиум
+10	Зиккурат	Жилой	Стандарт
+11	Искра-парк	Коммерческий	Бизнес
+12	I-CITY	Коммерческий	Премиум
+13	Технопарк Алабушево	Смешанный	Элитный
+14	Технопарк Орбита	Смешанный	Комфорт
+15	Kutuzoff Tower	Коммерческий	Бизнес
+16	Морозов	Коммерческий	Эконом
+17	Око	Коммерческий	Стандарт
+18	Белая площадь	Коммерческий	Элитный
+19	Капитал	Коммерческий	Стандарт
+20	Комсити	Коммерческий	Элитный
 \.
 
 
@@ -819,7 +1039,7 @@ SELECT pg_catalog.setval('public.real_estate_building_id_seq', 1, false);
 -- Name: real_estate_complex_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.real_estate_complex_id_seq', 1, false);
+SELECT pg_catalog.setval('public.real_estate_complex_id_seq', 20, true);
 
 
 --
