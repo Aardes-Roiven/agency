@@ -99,8 +99,8 @@ function rusConverter($string): string {
 function createEmployee(): void{
     global $array;
     $bigStr = '';
+    $querryString = 'insert into employee (id, name, specialization, number, email, login, password)' . '<br>' . 'values ';
     for ($i=1; $i<151; $i++) {
-        $querryString = 'insert into employee (id, name, specialization, number, email, login, password)' . '<br>' . 'values ';
         $randomId = $i;
         $randomName = $array['nameArray'][array_rand($array['nameArray'])];
         $randomFathersName = $array['fathersNameArray'][array_rand($array['fathersNameArray'])];

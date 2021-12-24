@@ -68,3 +68,7 @@ services:
 
 # Экспорт postgres
 # docker exec -t agency-postgres pg_dumpall -c -U postgres > dump.sql
+
+#поправить все фото mtm_employee_deal
+#добавитьсвязи между домами и застройщиками и поправить фото
+#поправить связи в комментариях на фото
