@@ -946,6 +946,26 @@ COPY public."position" (id, name, access_code) FROM stdin;
 --
 
 COPY public.property_dev (id, name, number, email) FROM stdin;
+1	ПИК	79293282157 	pik-official@pik.ru
+2	Домстрой	79294937417 	domstroy-official@domstroy.ru
+3	CapitalGroup	79291473040 	capitalgroup-official@capitalgroup.ru
+4	Донстрой	79298691971 	donstroy-official@donstroy.ru
+5	ФСК	79299643208 	fsk-official@fsk.ru
+6	Удача	79290557759 	udacha-official@udacha.ru
+7	Главстрой	79298711080 	glavstroy-official@glavstroy.ru
+8	Группа Эталон	79296266381 	gruppa etalon-official@gruppa etalon.ru
+9	Концерн Крост	79290785873 	koncern krost-official@koncern krost.ru
+10	ГК-Пионер	79293110284 	gk-pioner-official@gk-pioner.ru
+11	Интеко	79293200534 	inteko-official@inteko.ru
+12	Инград	79293932310 	ingrad-official@ingrad.ru
+13	МосРеалСтрой	79290942933 	mosrealstroy-official@mosrealstroy.ru
+14	Каскад	79296541185 	kaskad-official@kaskad.ru
+15	ГК-МИЦ	79298983082 	gk-mic-official@gk-mic.ru
+16	Юнит	79296047774 	yunit-official@yunit.ru
+17	Комстрин	79295475920 	komstrin-official@komstrin.ru
+18	Скайгард	79295599226 	skaygard-official@skaygard.ru
+19	Бесткон	79292165065 	bestkon-official@bestkon.ru
+20	Астерра	79294704133 	asterra-official@asterra.ru
 \.
 
 
@@ -1238,7 +1258,7 @@ ALTER TABLE ONLY public.mtm_employee_deal
 --
 
 ALTER TABLE ONLY public.mtm_employee_deal
-    ADD CONSTRAINT mtm_employee_deal_employee_id_fkey FOREIGN KEY (employee_id) REFERENCES public.client(id) ON DELETE CASCADE;
+    ADD CONSTRAINT mtm_employee_deal_employee_id_fkey FOREIGN KEY (employee_id) REFERENCES public.employee(id) ON DELETE CASCADE;
 
 
 --

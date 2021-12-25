@@ -114,7 +114,7 @@ create table mtm_employee_deal
     employee_id int not null,
     constraint employee_deal_id primary key (deal_id, employee_id),
     foreign key (deal_id) references deal (id) on delete cascade,
-    foreign key (employee_id) references client (id) on delete cascade
+    foreign key (employee_id) references employee (id) on delete cascade
 );
 
 insert into position (name, access_code)
@@ -482,3 +482,25 @@ values (1, 'Иванов Виктор Викторович', 'Обычный', 7
        (198, 'Круглов Арсений Александрович', 'Обычный', 79291819771, 'KruglovArseniyAleksandrovich-198@agency.ru'),
        (199, 'Высоцкий Александр Дмитриевич', 'Повышенный', 79292568230, 'VysockiyAleksandrDmitrievich-199@agency.ru'),
        (200, 'Баранов Пётр Евгеньевич', 'Приоритетный', 79290061657, 'BaranovPetrEvgenevich-200@agency.ru');
+
+insert into property_dev (id, name, number, email)
+values (1, 'ПИК', 79293282157, 'pik-official@pik.ru'),
+       (2, 'Домстрой', 79294937417, 'domstroy-official@domstroy.ru'),
+       (3, 'CapitalGroup', 79291473040, 'capitalgroup-official@capitalgroup.ru'),
+       (4, 'Донстрой', 79298691971, 'donstroy-official@donstroy.ru'),
+       (5, 'ФСК', 79299643208, 'fsk-official@fsk.ru'),
+       (6, 'Удача', 79290557759, 'udacha-official@udacha.ru'),
+       (7, 'Главстрой', 79298711080, 'glavstroy-official@glavstroy.ru'),
+       (8, 'Группа Эталон', 79296266381, 'gruppa etalon-official@gruppa etalon.ru'),
+       (9, 'Концерн Крост', 79290785873, 'koncern krost-official@koncern krost.ru'),
+       (10, 'ГК-Пионер', 79293110284, 'gk-pioner-official@gk-pioner.ru'),
+       (11, 'Интеко', 79293200534, 'inteko-official@inteko.ru'),
+       (12, 'Инград', 79293932310, 'ingrad-official@ingrad.ru'),
+       (13, 'МосРеалСтрой', 79290942933, 'mosrealstroy-official@mosrealstroy.ru'),
+       (14, 'Каскад', 79296541185, 'kaskad-official@kaskad.ru'),
+       (15, 'ГК-МИЦ', 79298983082, 'gk-mic-official@gk-mic.ru'),
+       (16, 'Юнит', 79296047774, 'yunit-official@yunit.ru'),
+       (17, 'Комстрин', 79295475920, 'komstrin-official@komstrin.ru'),
+       (18, 'Скайгард', 79295599226, 'skaygard-official@skaygard.ru'),
+       (19, 'Бесткон', 79292165065, 'bestkon-official@bestkon.ru'),
+       (20, 'Астерра', 79294704133, 'asterra-official@asterra.ru');

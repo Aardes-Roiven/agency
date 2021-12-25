@@ -70,6 +70,29 @@ $array = [
         "Повышенный",
         "Обычный"
     ],
+    'companyName' => [
+        "",
+        "ПИК",
+        "Домстрой",
+        "CapitalGroup",
+        "Донстрой",
+        "ФСК",
+        "Удача",
+        "Главстрой",
+        "Группа Эталон",
+        "Концерн Крост",
+        "ГК-Пионер",
+        "Интеко",
+        "Инград",
+        "МосРеалСтрой",
+        "Каскад",
+        "ГК-МИЦ",
+        "Юнит",
+        "Комстрин",
+        "Скайгард",
+        "Бесткон",
+        "Астерра"
+    ],
 ];
 
 function rusConverter($string): string {
@@ -138,7 +161,7 @@ function createClient(): void{
     global $array;
     $bigStr = '';
     $querryString = 'insert into client (id, name, status, number, email)' . '<br>' . 'values ';
-    for ($i=1; $i<201; $i++) {
+    for ($i=1; $i<101; $i++) {
         $randomId = $i;
         $randomName = $array['nameArray'][array_rand($array['nameArray'])];
         $randomFathersName = $array['fathersNameArray'][array_rand($array['fathersNameArray'])];
@@ -150,6 +173,23 @@ function createClient(): void{
         $element = "(" . $randomId . ", " . "'" . $getFullName .
             "'" . ", '" . $array['client_status'][$status] . "', " . $getNumber .
             ", " . "'" . $getEmail . "'), ";
+        $bigStr .= $element . '<br>';
+    }
+    $bigStr = $querryString . substr($bigStr, 0, -6);
+    echo $bigStr;
+}
+
+function createDev(): void{
+    global $array;
+    $bigStr = '';
+    $querryString = 'insert into property_dev (id, name, number, email)' . '<br>' . 'values ';
+    for ($i=1; $i<21; $i++) {
+        $randomId = $i;
+        $getNumber = '7' . rand(9290000000, 9299999999);
+        $getEmail = strtolower(rusConverter($array['companyName'][$randomId])) .
+                    '-official' . '@' . strtolower(rusConverter($array['companyName'][$randomId])) . '.ru';
+        $element = "(" . $randomId . ", '" . $array['companyName'][$randomId] .
+            "', " . $getNumber . ", '" . $getEmail . "'), ";
         $bigStr .= $element . '<br>';
     }
     $bigStr = $querryString . substr($bigStr, 0, -6);
