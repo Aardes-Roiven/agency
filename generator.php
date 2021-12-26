@@ -568,7 +568,44 @@ function createBuildingAndObject(): void
     }
 }
 
+$createDealArray = [
+    [
+        "Купля-продажа",
+        "Аренда",
+        "Ипотека",
+        "Обмен"
+    ],
+    [
+        "определение юридического статуса",
+        "проверка юридической чистоты",
+        "заключение предварительного договора",
+        "подписывание договора",
+        "оплата налогов",
+        "получение свидетельства"
+    ],
+    [
+        "РВО-",
+        "ПРК-",
+        "КШП-",
+        "ЗКП-",
+        "АНС-"
+    ]
+];
+
 function createDeal(): void
 {
+    global $createDealArray;
+    echo 'insert into deal (id, real_estate_object, property_dev_id, client_id, type, status, contract_number)' . '<br>' . 'values ';
+    for ($i = 1; $i<=200; $i++){
+        echo "(" . $i . ", 1, 1, " . $i . ", '" . $createDealArray[0][rand(0, 3)] . "', '" . $createDealArray[1][rand(0, 5)] . "', '" . $createDealArray[2][rand(0, 4)] . rand(134000, 999999) . "'), <br>";
+    }
+}
 
+function createMtm(): void
+{
+    echo 'insert into mtm_employee_deal (deal_id, employee_id)' . '<br>' . 'values ';
+    for ($i = 21; $i <= 150; $i++) {
+        echo "(" . $i . ", " . ($i - 20) . "), <br>";
+        echo "(" . $i . ", " . (201 - $i - 20) . "), <br>";
+    }
 }
