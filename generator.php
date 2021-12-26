@@ -93,6 +93,65 @@ $array = [
         "Бесткон",
         "Астерра"
     ],
+    "building_address" => [
+        "Красноармейская",
+        "Донская",
+        "Лужники",
+        "Ярмарочная",
+        "Петровская",
+        "Ленинска",
+        "Европейская",
+        "Кутузовская",
+        "Пушкинская",
+        "Васильевская",
+        "Щукинская",
+        "Дальняя",
+        "Московская",
+        "Морская",
+        "Краснокаменская",
+        "Харьковская",
+        "Сибирская",
+        "Ленинградская",
+        "Вяземская",
+        "Покровская",
+        "Хорошевская",
+        "Львовская",
+        "Центральная",
+        "Царская",
+        "Фермерская",
+        "Женевская",
+        "Борисовская",
+        "Жёлтая",
+        "Рудниковая",
+        "Андреевская",
+        "Яковлевская",
+        "Пушкарей",
+        "Тульская",
+        "Пряничная",
+        "Стрелецкая",
+        "Новострелецкая",
+        "Владимирская",
+        "Комсомольская",
+        "Радужная",
+        "Васнецовская"
+    ],
+    "type_deal" => [
+        "купля-продажа",
+        "аренда",
+        "ипотека",
+        "обмен"
+    ],
+    "type" => [
+        "Квартира",
+        "Студия",
+        "Апартаменты",
+        "Офис",
+        "Торговая точка"
+    ],
+    "estate_type" => [
+        "Жилая",
+        "Коммерческая",
+     ],
 ];
 
 function rusConverter($string): string {
@@ -194,4 +253,78 @@ function createDev(): void{
     }
     $bigStr = $querryString . substr($bigStr, 0, -6);
     echo $bigStr;
+}
+
+function createBuildingAndObject_1(): void{
+    global $array;
+    $querryBuildingString = 'insert into real_estate_building (id, address, complex_id, floor_count, dev_id)' . '<br>' . 'values ';
+    $querryObjectString = 'insert into real_estate_object (id, building_id ,local_address, places, price, area, floor, type, estate_type)' . '<br>' . 'values ';
+    $buildingCount = rand(6, 15);
+    $id_fix = 0;
+    for ($i=1; $i<$buildingCount; $i++) {
+        $address = "г. Москва, ул. " . $array['building_address'][0] . ", д. " . ($i+12);
+        $complex_id = 1;
+        $floor_count = rand(5, 10);
+        $dev_id = 1;
+        echo $querryBuildingString . "(" . $i . ", '" . $address . "', " . $complex_id . ", " . ($floor_count + 1) . ", " . $dev_id . ");" .
+            '<br>' . $querryObjectString;
+        for ($j=1; $j<$floor_count+2; $j++) {
+            $building_id = $i;
+            $local_address = $j;
+            $places = rand(8, 15);
+            $price = rand(300, 850);
+            $area = 2000;
+            $floor = $j;
+            $type = 0;
+            $estate_type = 0;
+        $element = "(". ($j+$id_fix) . ", " . $building_id . ", '" . $local_address .
+            "', " . $places . ", " . ($price * 1000000) . ", " . $area . ", " . $floor . ", " . $type . ", " . $estate_type . ")";
+        if ($j == $floor_count+1)
+        echo $element;
+        else echo $element . ', <br>';
+        }
+        echo "; <br>";
+        $id_fix += $floor_count+1;
+    }
+}
+
+function createBuildingAndObject_2(): void{
+    global $array;
+    $areatype = 2; // количество кв на этаже
+    $querryBuildingString = 'insert into real_estate_building (id, address, complex_id, floor_count, dev_id)' . '<br>' . 'values ';
+    $querryObjectString = 'insert into real_estate_object (id, building_id ,local_address, places, price, area, floor, type, estate_type)' . '<br>' . 'values ';
+    $buildingCount = rand(15, 30);// количество зданий
+    $id_fix = 0;
+    for ($i=15; $i<($buildingCount + 15); $i++) { // менять 15 в обоих местах
+        $address = "г. Москва, ул. " . $array['building_address'][1] . ", д. " . ($i+12);
+        $complex_id = 3; // менять
+        $floor_count = rand(5, 10); // менять
+        $dev_id = 2; // менять
+        echo $querryBuildingString . "(" . $i . ", '" . $address . "', " . $complex_id . ", " . ($floor_count + 1) . ", " . $dev_id . ");" .
+            '<br>' . $querryObjectString;
+        $v = 1;
+        $z = 0;
+        for ($j=118; $j<($floor_count * $areatype + 2 + 118); $j++) { // 118 менять в двух местах
+            $building_id = $i;
+            $local_address = $j - 117; // менять 118 - 1
+            $places = rand(5, 8); // менять
+            $price = rand(150, 400); // менять
+            $area = rand(10, 30);// менять
+            $floor = $v;
+            $type = 0; // менять
+            $estate_type = 0; // менять
+            $element = "(". ($j+$id_fix) . ", " . $building_id . ", '" . $local_address .
+                "', " . $places . ", " . ($price * 1000000) . ", " . ($area * 10) . ", " . $floor . ", " . $type . ", " . $estate_type . ")";
+            if ($j == $floor_count * $areatype + 1 + 118) // менять 118
+                echo $element;
+            else echo $element . ', <br>';
+            $z++;
+            if($z == $areatype){
+                $z = 0;
+                $v += 1;
+            }
+        }
+        echo "; <br>";
+        $id_fix += $floor_count * $areatype + 2;
+    }
 }
