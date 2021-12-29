@@ -1,6 +1,6 @@
 <?php
 
-/* @var $this \yii\web\View */
+/* @var $this View */
 /* @var $content string */
 
 use app\assets\AppAsset;
@@ -9,6 +9,7 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use yii\web\View;
 
 AppAsset::register($this);
 ?>
@@ -22,7 +23,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 ">
 <?php $this->beginBody() ?>
 
 <header>
@@ -35,9 +36,17 @@ AppAsset::register($this);
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav'],
+        'options' => ['class' => 'navbar-nav navbar-nav-c'],
         'items' => [
-            ['label' => 'На главную', 'url' => ['/site/index']],
+            ['label' => 'Агенство', 'url' => ['/site/index']],
+            ['label' => 'Клиенты', 'url' => ['/site/index']],
+            ['label' => 'Сделки', 'url' => ['/site/index']],
+            ['label' => 'Сотрудники', 'url' => ['/site/index']],
+            ['label' => 'ЗАстройщики', 'url' => ['/site/index']],
+            ['label' => 'Комплексы', 'url' => ['/site/index']],
+            ['label' => 'Здания', 'url' => ['/site/index']],
+            ['label' => 'Товары', 'url' => ['/site/index']],
+
             Yii::$app->user->isGuest ? (
                 ['label' => 'Войти', 'url' => ['/site/login']]
             ) : (
