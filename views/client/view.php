@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\web\YiiAsset;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
@@ -9,7 +10,7 @@ use yii\widgets\DetailView;
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Клиенты', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
-\yii\web\YiiAsset::register($this);
+YiiAsset::register($this);
 ?>
 <div class="client-view">
 
@@ -29,12 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            ['attribute' => 'id', 'label' => 'Идентификатор'],
-            ['attribute' => 'name', 'label' => 'Имя'],
-            ['attribute' => 'status', 'label' => 'Статус'],
-            ['attribute' => 'number', 'label' => 'Контактный номер телефона'],
-            ['attribute' => 'email', 'label' => 'Контактная электронная почта'],
-            ['attribute' => 'contract_number', 'label' => 'Номер юридического договора'],
+            'id',
+            'name',
+            'status',
+            'number',
+            'email:email',
         ],
     ]) ?>
 

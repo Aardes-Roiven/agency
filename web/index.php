@@ -12,7 +12,7 @@ $generator = require __DIR__ . '/../generator.php';
 
 function dp($a){
     echo "<pre>";
-    print_r($a);
+    var_dump($a);
     echo "</pre>";
 }
 

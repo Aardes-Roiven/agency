@@ -47,19 +47,14 @@ class ClientController extends AccessController
 
     /**
      * Displays a single Client model.
-     * @param int $id ID
+     * @param int $id Идентификатор
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
     {
-        $query = 'select c.*, d.contract_number ' .
-                 'from client c join deal d on ' .
-                 'd.client_id = c.id where c.id = ' . $id;
-        $model = Client::findBySql($query)->asArray()->all()[0];
-        $model['number'] = $this::beautifyNumber($model['number']);
         return $this->render('view', [
-            'model' => $model,
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -103,7 +98,7 @@ class ClientController extends AccessController
     /**
      * Updates an existing Client model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param int $id ID
+     * @param int $id Идентификатор
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -123,7 +118,7 @@ class ClientController extends AccessController
     /**
      * Deletes an existing Client model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param int $id ID
+     * @param int $id Идентификатор
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -137,7 +132,7 @@ class ClientController extends AccessController
     /**
      * Finds the Client model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $id ID
+     * @param int $id Идентификатор
      * @return Client the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
