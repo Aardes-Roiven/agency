@@ -2,20 +2,20 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use app\controllers\ClientController;
+
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\ClientSearch */
+/* @var $searchModel app\models\DealSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Клиенты';
+$this->title = 'Сделки';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="client-index">
+<div class="deal-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Добавить клиента', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить сделку', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -25,16 +25,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
+
             'id',
-            'name',
-            [
-                'attribute' => 'number',
-                'content' => function($data){
-                    return ClientController::beautifyNumber($data->number);
-                },
-            ],
-            'email:email',
-            'status',
+//            'real_estate_obj_id',
+//            'client_id',
+//            'type',
+//            'status',
+            'contract_number',
+
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
