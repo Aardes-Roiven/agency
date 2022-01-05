@@ -44,8 +44,8 @@ class Position extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'Идентификатор',
-            'name' => 'Имя',
+            'id' => 'Идентификатор должности',
+            'name' => 'Должность',
             'access_code' => 'Уровень доступа',
         ];
     }

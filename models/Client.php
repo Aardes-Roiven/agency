@@ -47,7 +47,7 @@ class Client extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'Идентификатор',
+            'id' => 'Идентификатор клиента',
             'name' => 'Имя',
             'status' => 'Статус',
             'number' => 'Контактный номер',

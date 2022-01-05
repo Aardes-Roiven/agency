@@ -2,16 +2,16 @@
 
 namespace app\controllers;
 
-use app\models\Client;
-use app\models\ClientSearch;
+use app\models\Employee;
+use app\models\EmployeeSearch;
 use app\controllers\AccessController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ClientController implements the CRUD actions for Client model.
+ * EmployeeController implements the CRUD actions for Employee model.
  */
-class ClientController extends AccessController
+class EmployeeController extends AccessController
 {
     /**
      * @inheritDoc
@@ -32,13 +32,14 @@ class ClientController extends AccessController
     }
 
     /**
-     * Lists all Client models.
+     * Lists all Employee models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ClientSearch();
+        $searchModel = new EmployeeSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -46,7 +47,7 @@ class ClientController extends AccessController
     }
 
     /**
-     * Displays a single Client model.
+     * Displays a single Employee model.
      * @param int $id Идентификатор
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -59,13 +60,13 @@ class ClientController extends AccessController
     }
 
     /**
-     * Creates a new Client model.
+     * Creates a new Employee model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Client();
+        $model = new Employee();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -81,7 +82,7 @@ class ClientController extends AccessController
     }
 
     /**
-     * Updates an existing Client model.
+     * Updates an existing Employee model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id Идентификатор
      * @return mixed
@@ -101,7 +102,7 @@ class ClientController extends AccessController
     }
 
     /**
-     * Deletes an existing Client model.
+     * Deletes an existing Employee model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id Идентификатор
      * @return mixed
@@ -115,15 +116,15 @@ class ClientController extends AccessController
     }
 
     /**
-     * Finds the Client model based on its primary key value.
+     * Finds the Employee model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id Идентификатор
-     * @return Client the loaded model
+     * @return Employee the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Client::findOne($id)) !== null) {
+        if (($model = Employee::findOne($id)) !== null) {
             return $model;
         }
 

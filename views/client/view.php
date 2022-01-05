@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\web\YiiAsset;
 use yii\widgets\DetailView;
+use app\controllers\ClientController;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Client */
@@ -33,7 +34,12 @@ YiiAsset::register($this);
             'id',
             'name',
             'status',
-            'number',
+            [
+                'attribute' => 'number',
+                'value' => function($data){
+                    return ClientController::beautifyNumber($data->number);
+                },
+            ],
             'email:email',
         ],
     ]) ?>
