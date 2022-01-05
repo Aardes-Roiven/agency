@@ -54,6 +54,7 @@ class EmployeeController extends AccessController
      */
     public function actionView($id)
     {
+//        dp($this->findModel($id)->employees);
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);

@@ -62,6 +62,21 @@ YiiAsset::register($this);
                         ['href' => Yii::$app->urlManager->createUrl(['position/view', 'id' => $model->position->id])]
                     );
                 },
+            ],
+            [
+                'attribute' => 'Подчинённые',
+                'format' => 'raw',
+                'value' => function ($model) {
+                    if (count($model->employees) != 0) {
+                        foreach ($model->employees as $employee) {
+                            $string .= Html::tag(
+                                    'a', Html::encode($employee->name),
+                                    ['href' => Yii::$app->urlManager->createUrl(['employee/view', 'id' => $employee->id])]
+                                ) . '<br>';
+                        }
+                        return $string;
+                    } else return '-';
+                },
             ]
         ],
     ]) ?>

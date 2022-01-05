@@ -34,6 +34,21 @@ YiiAsset::register($this);
             'name',
             'type',
             'comfort_class',
+            [
+                'attribute' => 'Здания',
+                'format' => 'raw',
+                'value' => function ($model) {
+                    if (count($model->realEstateBuildings) != 0) {
+                        foreach ($model->realEstateBuildings as $building) {
+                            $string .= Html::tag(
+                                    'a', Html::encode($building->address),
+                                    ['href' => Yii::$app->urlManager->createUrl(['building/view', 'id' => $building->id])]
+                                ) . '<br>';
+                        }
+                        return $string;
+                    } else return '-';
+                },
+            ]
         ],
     ]) ?>
 
