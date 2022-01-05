@@ -31,3 +31,5 @@ tests/_support/_generated
 
 #vagrant folder
 /.vagrant
+/web/css/index.css
+/web/css/index.css.map

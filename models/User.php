@@ -71,4 +71,9 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->password === $password;
     }
+
+    public function getPosition()
+    {
+        return $this->hasOne(Position::class, ['id' => 'id']);
+    }
 }
