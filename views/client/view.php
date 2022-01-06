@@ -41,6 +41,21 @@ YiiAsset::register($this);
                 },
             ],
             'email:email',
+            [
+                'attribute' => 'Сделки',
+                'format' => 'raw',
+                'value' => function ($model) {
+                    if (count($model->deals) != 0) {
+                        foreach ($model->deals as $deal) {
+                            $string .= Html::tag(
+                                    'a', Html::encode($deal->contract_number),
+                                    ['href' => Yii::$app->urlManager->createUrl(['deal/view', 'id' => $deal->id])]
+                                ) . '<br>';
+                        }
+                        return $string;
+                    } else return '-';
+                },
+            ]
         ],
     ]) ?>
 

@@ -32,7 +32,13 @@ YiiAsset::register($this);
         'attributes' => [
             'id',
             'name',
-            'access_code',
+            [
+                'attribute' => 'wage',
+                'label' => 'Заработная плата',
+                'value' => function ($model) {
+                    return '₽' . $model->wage;
+                },
+            ],
         ],
     ]) ?>
 

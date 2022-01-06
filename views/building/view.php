@@ -53,6 +53,21 @@ YiiAsset::register($this);
                 },
             ],
             'floor_count',
+            [
+                'attribute' => 'Объекты',
+                'format' => 'raw',
+                'value' => function ($model) {
+                    if (count($model->realEstateObjects) != 0) {
+                        foreach ($model->realEstateObjects as $object) {
+                            $string .= Html::tag(
+                                    'a', Html::encode($object->local_address),
+                                    ['href' => Yii::$app->urlManager->createUrl(['object/view', 'id' => $object->id])]
+                                ) . '<br>';
+                        }
+                        return $string;
+                    } else return '-';
+                },
+            ]
         ],
     ]) ?>
 

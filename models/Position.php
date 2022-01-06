@@ -33,8 +33,8 @@ class Position extends ActiveRecord
         return [
             [['name', 'access_code'], 'required'],
             [['name'], 'string'],
-            [['access_code'], 'default', 'value' => null],
-            [['access_code'], 'integer'],
+            [['wage'], 'default', 'value' => null],
+            [['wage'], 'integer'],
         ];
     }
 
@@ -46,7 +46,7 @@ class Position extends ActiveRecord
         return [
             'id' => 'Идентификатор должности',
             'name' => 'Должность',
-            'access_code' => 'Уровень доступа',
+            'wage' => 'Заработная плата',
         ];
     }
 

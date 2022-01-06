@@ -24,8 +24,13 @@ $this->params['breadcrumbs'][] = $this->title;
 //            ['class' => 'yii\grid\SerialColumn'],
             'id',
             'name',
-            'access_code',
-
+            [
+                'attribute' => 'wage',
+                'label' => 'Заработная плата',
+                'value' => function ($model) {
+                    return '₽' . $model->wage;
+                },
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

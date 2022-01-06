@@ -45,7 +45,7 @@ YiiAsset::register($this);
             'places',
             [
                 'attribute' => 'price',
-                'label' => 'Стоимость',
+                'label' => 'Цена',
                 'value' => function ($model){
                     return strtr($model->price, array('$' => '₽'));
                 },

@@ -28,16 +28,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'address',
-            [
-                'attribute' => 'complex_id',
-                'label' => 'Комплекс',
-                'value' => 'complex.name',
-            ],
-            [
-                'attribute' => 'dev_id',
-                'label' => 'Застройщик',
-                'value' => 'dev.name',
-            ],
+//            [
+//                'attribute' => 'complex_id',
+//                'label' => 'Комплекс',
+//                'value' => 'complex.name',
+//            ],
+//            [
+//                'attribute' => 'dev_id',
+//                'label' => 'Застройщик',
+//                'value' => 'dev.name',
+//            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

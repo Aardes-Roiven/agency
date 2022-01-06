@@ -5,7 +5,7 @@
 $this->title = 'Агенство';
 ?>
 
-<div class="site-index">
+<div class="site-index width">
 
     <div class="jumbotron text-center bg-transparent">
         <h1 class="display-4 color">Добро пожаловать!</h1>
