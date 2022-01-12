@@ -46,8 +46,8 @@ class MtmEmployeeDeal extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'deal_id' => 'Deal ID',
-            'employee_id' => 'Employee ID',
+            'deal_id' => 'Идентификатор сделки',
+            'employee_id' => 'Идентификатор сотрудника',
         ];
     }
 

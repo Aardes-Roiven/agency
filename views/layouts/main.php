@@ -40,12 +40,13 @@ AppAsset::register($this);
             ['label' => 'Агенство', 'url' => ['/site/index']],
             ['label' => 'Клиенты', 'url' => ['/client/index']],
             ['label' => 'Сделки', 'url' => ['/deal/index']],
+            ['label' => 'Сотрудники', 'url' => ['/employee/index']],
             ['label' => 'Застройщики', 'url' => ['/dev/index']],
             ['label' => 'Комплексы', 'url' => ['/complex/index']],
             ['label' => 'Здания', 'url' => ['/building/index']],
             ['label' => 'Товары', 'url' => ['/object/index']],
-            ['label' => 'Сотрудники', 'url' => ['/employee/index']],
             ['label' => 'Должности', 'url' => ['/position/index']],
+            ['label' => 'Сотрудники и сделки', 'url' => ['/mtm/index']],
 
             Yii::$app->user->isGuest ? (
                 ['label' => 'Войти', 'url' => ['/site/login']]
